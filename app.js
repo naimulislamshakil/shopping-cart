@@ -7,13 +7,13 @@ function updateSubtotal() {
     
     const phonePrice = inputPhoneFieldNumber * 1219;
     const casePrice = inputCaseFieldNumber * 59;
-    const totalPrice = phonePrice + casePrice;
+    const totalPrice = parseInt(phonePrice + casePrice);
     document.getElementById('subtotal').innerText = totalPrice;
 
-    const taxAmount = (1 / 100) * totalPrice;
+    const taxAmount = parseInt((1 / 100) * totalPrice);
     document.getElementById('tax').innerText = taxAmount;
 
-    const total = taxAmount + totalPrice;
+    const total = parseInt(taxAmount + totalPrice);
     document.getElementById('total').innerText = total;
 }
 
